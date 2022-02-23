@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white
+}
+
+header {
+    background: linear-gradient(160deg, #3f1434, #472e0d);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+h1, p {
+    margin: 0;
+}
+
+
+.link-bar {
+    display: block;
+    width: 100%;
+    
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    padding-left: 15px;
+    padding-right: 35px;
+    overflow: hidden;
+    position: relative;
+}
+
+.link-bar.right {
+    padding-left: 35px;
+    padding-right: 15px;
+}
+
+.link-bar div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    padding: 25px;
+
+    transition: transform 0.2s, background 0.2s;
+}
+
+.right div {
+    text-align: right;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.link-bar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+
+    transition: filter 0.2s;
+}
+
+.link-bar:hover div {
+    transform: translateX(10px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.link-bar.right:hover div {
+    transform: translateX(-10px);
+}
+
+.link-bar:hover img {
+    filter: brightness(0.6);
+}
+
+.link-bar:hover img:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
