@@ -89,14 +89,14 @@ h1, p {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.3);
+    filter: brightness(0.3) grayscale(0.3);
 
     transition: filter 0.2s;
 }
 
 .link-bar:hover div {
     transform: translateX(10px);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .link-bar.right:hover div {
@@ -104,15 +104,5 @@ h1, p {
 }
 
 .link-bar:hover img {
-    filter: brightness(0.6);
-}
-
-.link-bar:hover img:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    filter: brightness(0.8);
 }
