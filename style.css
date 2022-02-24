@@ -71,7 +71,7 @@ h1, p {
     max-width: 600px;
     padding: 25px;
 
-    transition: transform 0.2s, background 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .right div {
