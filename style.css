@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -33,6 +33,24 @@ header {
     }
 }
 
+main {
+    margin: 25px auto;
+    max-width: min(800px, calc(100% - 50px));
+    padding: 25px;
+    border-radius: 20px;
+
+    background: #eeeeee;
+    color: #000000;
+}
+
+h1 {
+    margin: 0
+}
+
+p:last-child {
+    margin: 0;
+}
+
 .logo {
     width: 96px;
     height: 96px;
@@ -40,8 +58,13 @@ header {
     vertical-align: middle;
 }
 
-h1, p {
-    margin: 0;
+header a {
+    text-decoration: none ;
+    color: white;
+}
+
+header a:hover {
+    text-decoration: underline;
 }
 
 
@@ -61,6 +84,10 @@ h1, p {
 .link-bar.right {
     padding-left: 35px;
     padding-right: 15px;
+}
+
+.link-bar p {
+    margin: 0;
 }
 
 .link-bar div {
@@ -104,5 +131,9 @@ h1, p {
 }
 
 .link-bar:hover img {
-    filter: brightness(0.8);
+    filter: brightness(1);
+}
+
+code, pre {
+    font-family: 'Fira Code', monospace;
 }
