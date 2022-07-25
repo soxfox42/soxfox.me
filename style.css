@@ -137,3 +137,7 @@ header a:hover {
 code, pre {
     font-family: 'Fira Code', monospace;
 }
+
+.pixel {
+    image-rendering: pixelated;
+}
