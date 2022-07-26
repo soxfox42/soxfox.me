@@ -131,7 +131,7 @@ header a:hover {
 }
 
 .link-bar:hover img {
-    filter: brightness(1);
+    filter: brightness(1) grayscale(0);
 }
 
 code, pre {
