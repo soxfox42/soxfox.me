@@ -1,159 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;700&family=Fira+Code&display=swap);
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-}
-
 body {
     margin: 0;
-    background: black;
-    color: white
+    background: rgb(242, 242, 247);
+    color: rgb(57, 57, 57);
+    font-family: "Fira Sans";
+    font-size: 110%;
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    word-spacing: 2px;
 }
 
 header {
-    background: linear-gradient(160deg, #3f1434, #472e0d);
-    padding: 20px;
-    padding-right: 30px;
+    background: white;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    grid-column: 1 / 4;
+    position: sticky;
+    top: 0;
+}
+
+header > div {
+    grid-column: 2;
+    padding: 0 32px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    font-size: 200%;
+    gap: 16px;
 }
 
-@media screen and (min-width: 600px) {
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    }
+header > div, h1 {
+    font-family: "Montserrat";
+    font-weight: bold;
 }
 
-main {
-    margin: 25px auto;
-    max-width: min(800px, calc(100% - 50px));
-    padding: 25px;
-    border-radius: 20px;
+.banner {
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    grid-column: 1 / 4;
+    background: url(/images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
-    background: #eeeeee;
-    color: #000000;
+.banner .title {
+    grid-column: 2;
+    display: inline-block;
+    margin: 32px;
+    padding: 0 32px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.banner, .banner h1, .banner a {
+    color: white;
 }
 
 h1 {
-    margin: 0;
-    font-size: 24pt;
+    color: rgb(183, 26, 85);
 }
 
-p:last-child {
-    margin: 0;
+main {
+    padding: 0 32px;
+    grid-column: 2;
 }
 
-.logo {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    vertical-align: middle;
+pre > code {
+    border-radius: 16px;
+    border: 2px solid rgba(34, 54, 134, 0.25);
 }
 
-.social {
-    width: 32px;
-    height: 32px;
-    transition: opacity 0.2s;
+code {
+    border: 1px solid rgba(34, 54, 134, 0.25);
+    border-radius: 8px;
+    font-family: "Fira Code", monospace;
+    word-spacing: 0;
+    background: white;
+    padding: 0 4px;
 }
 
-.social:hover {
-    opacity: 70%;
+code.hljs {
+  padding: 0 4px;
 }
 
-header a {
-    text-decoration: none ;
-    color: white;
+a {
+    color: rgb(19, 72, 172);
+    text-decoration: none;
 }
 
-header a:hover {
+a:hover {
     text-decoration: underline;
 }
 
+header a {
+    color: rgb(57, 57, 57);
+}
+
+.logo {
+    border-radius: 100%;
+    height: 48px;
+}
+
 .spacer {
-    flex-grow: 1;
+    flex: 1;
 }
 
-
-.link-bar {
+.social {
+    height: 32px;
     display: block;
-    width: 100%;
-    
-    text-decoration: none;
-    color: white;
-    padding: 25px;
-    padding-left: 15px;
-    padding-right: 35px;
-    overflow: hidden;
-    position: relative;
 }
 
-.link-bar.right {
-    padding-left: 35px;
-    padding-right: 15px;
+li:not(:last-child) {
+    margin-bottom: 8px;
 }
 
-.link-bar p {
-    margin: 0;
-}
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: rgb(23, 23, 28);
+        color: rgb(244, 244, 244);
+    }
 
-.link-bar div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    max-width: 600px;
-    padding: 25px;
+    header {
+        background: rgb(50, 50, 57);
+    }
 
-    transition: transform 0.2s, background-color 0.2s;
-}
+    header a {
+        color: white;
+    }
 
-.right div {
-    text-align: right;
-    align-items: flex-end;
-    margin-left: auto;
-    margin-right: 0;
-}
+    .social {
+        filter: invert(100%);
+    }
 
-.link-bar img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.3) grayscale(0.3);
+    pre > code {
+        border: 2px solid rgba(180, 206, 244, 0.35);
+    }
 
-    transition: filter 0.2s;
-}
+    code {
+        background: rgb(13, 17, 23);
+        border: 1px solid rgba(180, 206, 244, 0.35);
+    }
 
-.link-bar:hover div {
-    transform: translateX(10px);
-    background: rgba(0, 0, 0, 0.8);
-}
+    h1 {
+        color: rgb(230, 80, 136);
+    }
 
-.link-bar.right:hover div {
-    transform: translateX(-10px);
-}
+    a {
+        color: rgb(130, 190, 242);
+    }
 
-.link-bar:hover img {
-    filter: brightness(1) grayscale(0);
-}
-
-code, pre {
-    font-family: 'Fira Code', monospace;
-}
-
-.pixel {
-    image-rendering: pixelated;
+    .banner {
+        background-color: rgb(160, 160, 160);
+        background-blend-mode: multiply;
+    }
 }
