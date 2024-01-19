@@ -13,6 +13,7 @@ body {
     display: grid;
     grid-template-columns: 1fr min(80ch, 100%) 1fr;
     word-spacing: 2px;
+    line-height: 1.4;
 }
 
 header {
