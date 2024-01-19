@@ -70,6 +70,12 @@ main {
     grid-column: 2;
 }
 
+footer {
+    grid-column: 2;
+    padding: 0 16px;
+    font-size: 80%;
+}
+
 pre > code {
     border-radius: 16px;
     border: 2px solid rgba(34, 54, 134, 0.25);
