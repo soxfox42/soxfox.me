@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{ define "title" }}{{ if .IsHome | not }}{{ .Title }} | {{ end }}{{ .Site.Title }}{{ end }}
+    <title>{{ template "title" . }}</title>
+
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <meta name="description" content="{{ .Summary }}">
+
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ template "title" . }}">
+    <meta property="og:description" content="{{ .Summary }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
+    <meta name="twitter:url" content="{{ .Permalink }}">
+    <meta name="twitter:title" content="{{ template "title" }}">
+    <meta name="twitter:description" content="{{ .Summary }}">
+
+    {{ with .Params.card_image }}
+    <meta property="og:image" content="{{ absURL . }}">
+    <meta name="twitter:image" content="{{ absURL . }}">
+    {{ end }}
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="/images/soxfox.webp" alt="" class="logo" />
+            <a href="/">soxfox</a>
+            <div class="spacer"></div>
+            <a href="https://github.com/soxfox42">
+                <img src="/images/github.svg" alt="soxfox42 on GitHub" class="social" />
+            </a>
+            <a href="https://aus.social/@soxfox42" rel="me">
+                <img src="/images/mastodon.svg" alt="soxfox42 on Mastodon" class="social" />
+            </a>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="title">
+            <h1>{{ .Title }}</h1>
+            {{ block "banner" . }}{{ end }}
+        </div>
+    </div>
+
+    <main>
+        {{ block "main" . }}
+        {{ .Content }}
+        {{ end }}
+    </main>
+</body>
+
+</html>

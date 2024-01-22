@@ -1,0 +1,7 @@
+baseURL = "https://soxfox.me/"
+languageCode = "en-us"
+title = "soxfox"
+timeZone = "Australia/Melbourne"
+
+[markup.highlight]
+style = "github-dark"
