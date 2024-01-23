@@ -1,6 +1,6 @@
 +++
 title = "#48in24 – Week 1"
-date = 2024-01-19
+date = 2024-01-23T10:00:00+11:00
 summary = "Week 1 of #48in24 is here, and we're leaping into it by looking at leap years! Featured languages: Python, Clojure, MIPS Assembly."
 tags = ["48in24"]
 aliases = ["/blog/48in24/week1.html"]

@@ -1,6 +1,6 @@
 +++
 title = "#48in24 – Introduction"
-date = 2024-01-19
+date = 2024-01-23T09:00:00+11:00
 summary = "#48in24 is a year-long challenge from the Exercism coding practice and mentoring site. As the year goes on, I will document my experience with it here."
 aliases = ["/blog/48in24"]
 +++
