@@ -1,0 +1,11 @@
+{{ define "banner" }}
+<p>Published on {{ .Date | time.Format ":date_long" }}</p>
+{{ with .GetTerms "tags" }}
+<p>Tags:
+	{{ range . }}
+	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	{{ end }}
+</p>
+{{ end }}
+<p><a href="{{ relref . "/blog" }}">← Back to Posts</a></p>
+{{ end }}

@@ -10,8 +10,7 @@ body {
     color: rgb(57, 57, 57);
     font-family: "Fira Sans";
     display: grid;
-    grid-template-columns: 1fr min(80ch, 100%) 1fr;
-    word-spacing: 2px;
+    grid-template-columns: 1fr min(100ch, 100%) 1fr;
     line-height: 1.4;
 }
 
@@ -19,7 +18,7 @@ header {
     background: white;
     height: 80px;
     display: grid;
-    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    grid-template-columns: 1fr min(100ch, 100%) 1fr;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     grid-column: 1 / 4;
     position: sticky;
@@ -42,11 +41,12 @@ header > div, h1 {
 
 .banner {
     display: grid;
-    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    grid-template-columns: 1fr min(100ch, 100%) 1fr;
     grid-column: 1 / 4;
     background: url(/images/banner.jpg);
     background-size: cover;
     background-position: center;
+    margin-bottom: 16px;
 }
 
 .banner .title {
@@ -76,31 +76,34 @@ footer {
     font-size: 80%;
 }
 
-pre > code {
-    border-radius: 16px;
-    border: 2px solid rgba(34, 54, 134, 0.25);
+pre {
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid rgba(180, 206, 244, 0.55);
 }
 
 code {
-    border: 1px solid rgba(34, 54, 134, 0.25);
-    border-radius: 8px;
     font-family: "Fira Code", monospace;
-    word-spacing: 0;
+    border: 1px solid rgb(126, 155, 172);
     background: white;
+    border-radius: 4px;
     padding: 0 4px;
 }
 
-code.hljs {
-  padding: 0 4px;
+pre > code {
+    border: unset;
+    background: unset;
+    border-radius: unset;
+    padding: unset;
 }
 
 a {
-    color: rgb(19, 72, 172);
-    text-decoration: none;
+    color: rgb(53, 104, 200);
+    text-underline-offset: 2px;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 header a {
@@ -125,6 +128,14 @@ li:not(:last-child) {
     margin-bottom: 8px;
 }
 
+aside {
+    background: rgb(255, 210, 200);
+    border: 2px solid rgb(244, 179, 164);
+    padding: 0 24px;
+    border-radius: 16px;
+    display: inline-block;
+}
+
 @media screen and (prefers-color-scheme: dark) {
     body {
         background: rgb(23, 23, 28);
@@ -143,13 +154,13 @@ li:not(:last-child) {
         filter: invert(100%);
     }
 
-    pre > code {
+    pre {
         border: 2px solid rgba(180, 206, 244, 0.35);
     }
 
     code {
-        background: rgb(13, 17, 23);
-        border: 1px solid rgba(180, 206, 244, 0.35);
+        background: unset;
+        border-color: rgb(121, 121, 121);
     }
 
     h1 {
@@ -163,5 +174,10 @@ li:not(:last-child) {
     .banner {
         background-color: rgb(160, 160, 160);
         background-blend-mode: multiply;
+    }
+
+    aside {
+        background: rgb(115, 63, 51);
+        border-color: rgb(170, 101, 85);
     }
 }

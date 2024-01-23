@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ .Content }}
+
+<h1>Links</h1>
+
+<ul>
+    {{ range .Site.Sections }}
+    {{ if .Params.soon }}
+    <li>{{ .Title }} (soon™)</li>
+    {{ else }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    {{ end }}
+</ul>
+
+{{ end }}

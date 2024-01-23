@@ -1,0 +1,4 @@
+<aside>
+<h3>{{ .Get 0 }}</h3>
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</aside>
