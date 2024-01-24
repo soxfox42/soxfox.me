@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;700&family=Fira+Code&display=swap);
-
 * {
     box-sizing: border-box;
 }
@@ -80,6 +78,7 @@ pre {
     border-radius: 8px;
     padding: 8px;
     border: 2px solid rgba(180, 206, 244, 0.55);
+    overflow: auto;
 }
 
 code {
