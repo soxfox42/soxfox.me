@@ -87,6 +87,12 @@ code {
     background: white;
     border-radius: 4px;
     padding: 0 4px;
+
+    /* workaround iOS being wonky */
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 pre > code {
