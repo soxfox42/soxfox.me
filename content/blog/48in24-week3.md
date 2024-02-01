@@ -6,7 +6,7 @@ tags = ["48in24"]
 card_image = "/images/cards/48in24-week3.png"
 +++
 
-[Raindrops](https://exercism.org/exercises/raindrops) is the latest featured exercise of #48in24, and the final featured exercise of January -- the warm-up month. Raindrops is a simple variation on the classic coding interview question/children's game [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz). The original task asks coders to print the integers from 1 to 100, but replace multiples of three with "Fizz", multiples of five with "Buzz", and multiples of *both* with "FizzBuzz". Exercism's version of this task also includes multiples of seven, replaces "Fizz" and "Buzz" with the sounds of raindrops. It also removes the looping requirement, and now just expects the code to take a number and return the corresponding raindrop string.
+[Raindrops](https://exercism.org/exercises/raindrops) is the latest featured exercise of #48in24, and the final featured exercise of January -- the warm-up month. Raindrops is a simple variation on the classic coding interview question/children's game [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz). The original task asks coders to print the integers from 1 to 100, but replace multiples of three with "Fizz", multiples of five with "Buzz", and multiples of *both* with "FizzBuzz". Exercism's version of this task also includes multiples of seven, and replaces "Fizz" and "Buzz" with the sounds of raindrops. It also removes the looping requirement, and now just expects the code to take a number and return the corresponding raindrop string.
 
 This week, since the exercise is pretty easy, I'm choosing to keep things entertaining (for myself at least) by solving it in each featured language using a notable feature of that language.
 
