@@ -141,6 +141,14 @@ aside {
     display: inline-block;
 }
 
+h1, h2 {
+    scroll-margin-top: 100px;
+}
+
+.email i {
+    display: none;
+}
+
 @media screen and (prefers-color-scheme: dark) {
     body {
         background: rgb(23, 23, 28);
