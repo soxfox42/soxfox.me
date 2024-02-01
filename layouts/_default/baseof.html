@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
     <meta name="twitter:url" content="{{ .Permalink }}">
-    <meta name="twitter:title" content="{{ template "title" }}">
+    <meta name="twitter:title" content="{{ template "title" . }}">
     <meta name="twitter:description" content="{{ .Summary }}">
 
     {{ with .Params.card_image }}
