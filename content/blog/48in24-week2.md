@@ -1,5 +1,5 @@
 +++
-title = "#48in24 – Week 2"
+title = "#48in24 – Week 2: Reverse String"
 date = 2024-01-23T19:25:02+11:00
 summary = "!2 keew rof emiT – sorry, time for week 2! This week the task is to reverse some strings, which is pretty simple... until it isn't. Featured languages: JavaScript, Nim, C++."
 tags = ["48in24"]

@@ -1,5 +1,5 @@
 +++
-title = "#48in24 – Week 4"
+title = "#48in24 – Week 4: Roman Numerals"
 date = 2024-02-10T12:40:19+11:00
 summary = "In Week IV of #48in24, Roman numerals are the focus, and some relatively obscure languages were chosen. Featured languages: Elixir, Pharo, Julia."
 tags = ["48in24"]

@@ -1,5 +1,5 @@
 +++
-title = "#48in24 – Week 3"
+title = "#48in24 – Week 3: Raindrops"
 date = 2024-02-01T20:25:36+11:00
 summary = "Objects and vectors and macros, oh my! This week is all about Exercism's take on FizzBuzz. Featured languages: Ruby, R, Common Lisp."
 tags = ["48in24"]

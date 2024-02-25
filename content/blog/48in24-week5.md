@@ -1,5 +1,5 @@
 +++
-title = "#48in24 – Week 5"
+title = "#48in24 – Week 5: Protein Translation"
 date = 2024-02-17T16:13:45+11:00
 summary = "I get to learn about biochemistry and functional programming in the same week of #48in24, what a deal! Featured languages: F#, Crystal, C#."
 tags = ["48in24"]
