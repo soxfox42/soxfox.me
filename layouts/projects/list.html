@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ .Content }}
+{{ range .Pages.ByTitle }}
+<div>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</div>
+{{ end }}
+{{ end }}
+
+{{ define "styles" }}
+@media screen and (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 32px;
+    }
+
+    main > p {
+        grid-column: 1 / 3;
+    }
+}
+{{ end }}

@@ -1,4 +1,5 @@
 +++
 title = "Projects"
-soon = true
 +++
+
+Just a few things that I've built and shared.
