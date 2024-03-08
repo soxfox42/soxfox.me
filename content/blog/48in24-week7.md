@@ -115,6 +115,6 @@ I found it a little odd that there doesn't seem to be a standard library functio
 
 # Final Thoughts
 
-I enjoyed the additional challenge that the Haskell version provided, but I do understand that removing it makes for a better early exercise in general. With this task complete, Functional Februrary is over, and Mechanical March can begin!
+I enjoyed the additional challenge that the Haskell version provided, but I do understand that removing it makes for a better early exercise in general. With this task complete, Functional February is over, and Mechanical March can begin!
 
 I hope you enjoyed seeing the different ways I solved this week's exercise, and I'm looking forward to Week 8!

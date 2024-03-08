@@ -234,7 +234,7 @@ pub fn foldr(
 }
 ```
 
-The Gleam code on the other hand has to use a recursive appraoch. `foldl` is pretty simple, it uses the `initial` argument as the accumulator in the recursive call -- take a list item, combine it with the accumulator, then use that as the new initial value for the next call. Rather than reversing the list for `foldr` though, this code takes advantage of the call stack to handle the reversing. First, it calculates the result from the rest of the list, then only once that's done does it combine the current item. This means that the first item of the list will always be combined last, which is what we want.
+The Gleam code on the other hand has to use a recursive approach. `foldl` is pretty simple, it uses the `initial` argument as the accumulator in the recursive call -- take a list item, combine it with the accumulator, then use that as the new initial value for the next call. Rather than reversing the list for `foldr` though, this code takes advantage of the call stack to handle the reversing. First, it calculates the result from the rest of the list, then only once that's done does it combine the current item. This means that the first item of the list will always be combined last, which is what we want.
 
 ## `reverse`
 
