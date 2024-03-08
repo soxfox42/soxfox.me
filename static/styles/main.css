@@ -172,7 +172,7 @@ h1, h2 {
     }
 
     code {
-        background: unset;
+        background: rgb(15, 15, 15);
         border-color: rgb(121, 121, 121);
     }
 
@@ -192,5 +192,9 @@ h1, h2 {
     aside {
         background: rgb(115, 63, 51);
         border-color: rgb(170, 101, 85);
+    }
+
+    img.invertible {
+        filter: invert(100%);
     }
 }
