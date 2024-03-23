@@ -245,7 +245,7 @@ text
 end)
 ```
 
-The single-threaded frequency count function splits the string into [graphemes]({{< ref "blog/48in24-week2/#graphemes" >}}), and then uses `Enum.reduce` to [fold]({{< ref "blog/48in24-week6/#list-folding" >}}) over the sequence of graphemes. For each grapheme, if it is a letter (determined by a regex), the accumulated map is updated to increase the count of that letter.
+The single-threaded frequency count function splits the string into [graphemes]({{< ref "48in24-week2#graphemes" >}}), and then uses `Enum.reduce` to [fold]({{< ref "48in24-week6#list-folding" >}}) over the sequence of graphemes. For each grapheme, if it is a letter (determined by a regex), the accumulated map is updated to increase the count of that letter.
 
 ```elixir
 texts
