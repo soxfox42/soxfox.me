@@ -132,7 +132,7 @@ class ParallelLetterFrequency {
 }
 ```
 
-The expected code structure here has the strings passed in via the constructor of `ParallelLetterFrequency`, and the computation perfomed by a `countLetters` method. In the constructor, I also set up an `ArrayList` to track the resulting partial frequency maps, since there's no convenient channels like in Go, and threads can't return values like in some other languages.
+The expected code structure here has the strings passed in via the constructor of `ParallelLetterFrequency`, and the computation performed by a `countLetters` method. In the constructor, I also set up an `ArrayList` to track the resulting partial frequency maps, since there's no convenient channels like in Go, and threads can't return values like in some other languages.
 
 `countLetters` starts by iterating over all the strings, setting up result hashmaps for them, and starting and storing a thread for each one.
 
