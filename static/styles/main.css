@@ -198,3 +198,9 @@ h1, h2 {
         filter: invert(100%);
     }
 }
+
+@media screen and (max-width: 600px) {
+    pre > code {
+        font-size: 90%;
+    }
+}
