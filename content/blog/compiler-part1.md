@@ -5,7 +5,7 @@ summary = "The story of how I became a compiler developer, I guess. In the first
 tags = ["programming languages", "callisto"]
 +++
 
-## A Strange Obsession
+# A Strange Obsession
 
 It all started with a silly little benchmark. The [Tak function](https://en.wikipedia.org/wiki/Tak_(function)) is a small recursive function that can be used as a primitive benchmark for the speed of recursion in a progamming language. It has the following definition:
 
@@ -47,7 +47,7 @@ Forth is one of a family of languages known as [concatenative languages](https:/
 
 I took this a little further, and created a [GitHub repo](https://github.com/soxfox42/tak) with a benchmarking script and consistent tools for building and running each implementation. I took some of the catlang implementations, along with a handful of my own implementations in other languages, and started tracking how quickly each ran. There are instructions for contributing in the repo (hint, hint), and I've accepted three PRs with new implementations so far: [flber](https://github.com/flber) wrote the Rust implementation (some Rust fan I am 😆), [yeti](https://github.com/yeti0904) wrote a D version, and [Ivan8or](https://github.com/Ivan8or) wrote a Ruby version.
 
-## A New Language
+# A New Language
 
 The D implementation isn't yeti's only contribution to my Tak collection though. Much earlier in the project, he posted a version of Tak written in his own compiled language [Callisto](https://callisto.mesyeti.uk/). I was interested, and got it running on a Linux machine, but at that point I didn't include it in the main Tak repo as Callisto couldn't yet target my main computer -- an ARM Mac. It couldn't even target macOS at all, so I couldn't run it through Apple's translation layer Rosetta 2, as I did with Factor.
 
@@ -60,7 +60,7 @@ This time, I would actually be able to benchmark Callisto against the other lang
 
 This was where I got started working on Callisto -- I wanted to add just enough functionality to build an x86_64 macOS version of the Tak program suitable for my collection. This first round of changes was reasonably small. I introduced a `parse_int` function to the standard library, added `Args` support for macOS, and fixed a few easy bugs.
 
-## A Brief Introduction
+# A Brief Introduction
 
 {{< figure src="/images/HP-45.jpg" title="Basically the same thing as Callisto" >}}
 
