@@ -152,6 +152,7 @@ aside {
     padding: 0 24px;
     border-radius: 16px;
     display: inline-block;
+    width: 100%;
 }
 
 h1, h2 {
