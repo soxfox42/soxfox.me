@@ -1,9 +1,10 @@
 <svg version="1.1" width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <image href="bg.jpg" height="100%" width="100%" />
   <text x="50%" y="200" font-family="Montserrat" font-weight="700" font-size="120pt" text-anchor="middle" fill="#c7d9f0">#48in24</text>
-  <text x="50%" y="350" font-family="Fira Sans" font-size="60pt" text-anchor="middle" fill="#c7d9f0">Week 13 - Scrabble Score</text>
-  <image href="tracks/python.png" height="150" width="150" x="325" y="420" />
-  <image href="tracks/scheme.png" height="150" width="150" x="525" y="420" />
-  <image href="tracks/c.png" height="150" width="150" x="725" y="420" />
+  <text x="50%" y="350" font-family="Fira Sans" font-size="60pt" text-anchor="middle" fill="#c7d9f0">Four Interesting Solutions</text>
+  <image href="tracks/wasm.png" height="150" width="150" x="225" y="420" />
+  <image href="tracks/prolog.png" height="150" width="150" x="425" y="420" />
+  <image href="tracks/unison.png" height="150" width="150" x="625" y="420" />
+  <image href="tracks/gleam.png" height="150" width="150" x="825" y="420" />
 </svg>
 
