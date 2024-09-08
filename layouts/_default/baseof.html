@@ -9,7 +9,9 @@
     <title>{{ template "title" . }}</title>
 
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    {{ with resources.Get "styles/main.css" | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{ end }}
     <style>{{ block "styles" .}}{{ end }}</style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
