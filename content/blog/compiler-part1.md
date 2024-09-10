@@ -2,12 +2,12 @@
 title = "Building a Compiler Backend (Part 1: Callisto)"
 date = 2024-09-06T10:00:00+10:00
 summary = "The story of how I became a compiler developer, I guess. In the first part, you'll see how a tiny benchmark program got me hooked on a neat little stack language."
-tags = ["programming languages", "callisto"]
+tags = ["Programming Languages", "Callisto"]
 +++
 
 # A Strange Obsession
 
-It all started with a silly little benchmark. The [Tak function](https://en.wikipedia.org/wiki/Tak_(function)) is a small recursive function that can be used as a primitive benchmark for the speed of recursion in a progamming language. It has the following definition:
+It all started with a silly little benchmark. The [Tak function](https://en.wikipedia.org/wiki/Tak_(function)) is a small recursive function that can be used as a primitive benchmark for the speed of recursion in a programming language. It has the following definition:
 
 ```python
 def tak(x, y, z)
