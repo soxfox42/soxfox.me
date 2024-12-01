@@ -219,8 +219,10 @@ th, td {
         border-color: rgb(170, 101, 85);
     }
 
-    img.invertible {
-        filter: invert(100%);
+    img.invertible, .invertible img {
+        filter: invert(100%) hue-rotate(180deg);
+        z-index: -1;
+        position: relative;
     }
 
     th, td {
