@@ -32,7 +32,7 @@ In any case, I will be reading some others' December Adventure updates, and I su
 Here are some that I'll be keeping an eye on, go check them out:
 
 - [Devine Lu Linvega](https://rabbits.srht.site/decadv/)
-- [MESYETI](https://mesyeti.uk/december_adventure_log/) (Hey, it's the creator of [Callisto]({{< ref "tags/callisto" >}})!)
+- [MESYETI](https://mesyeti.uk/december_adventure_log/) (Hey, it's the creator of [Callisto]({{< ref "/tags/callisto" >}})!)
 - [Capital](https://www.sheeeeeeeep.art/december-adventure-2024.html)
 - [yumaikas](https://junglecoder.com/december-adventure/2024.html)
 
