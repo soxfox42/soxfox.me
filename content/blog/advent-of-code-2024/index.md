@@ -2,7 +2,7 @@
 title = "Advent of Code 2024 / December Adventure"
 date = 2024-12-02T08:00:00+11:00
 summary = "What I'm doing this December."
-card_image = "/images/cards/advent-of-code-2024.png"
+card_image = "/images/cards/advent-of-code-2024.webp"
 +++
 
 It's December, and that means it's time for another [Advent of Code](adventofcode.com)! This will be my fifth year participating in the event, though so far the only year I finished all tasks in was 2023.
@@ -13,7 +13,7 @@ I'll probably write a blog post or two as I come across I particularly enjoy, or
 
 I figured I'd use this post to share a rough look at my process for AoC (and most other programming puzzles, for that matter).
 
-{{< figure src="terminal.png" title="My usual challenge-coding setup. This is from a previous year." >}}
+{{< figure src="terminal.webp" title="My usual challenge-coding setup. This is from a previous year." >}}
 
 1. I use a terminal with the ability to display two panes side by side. Right now, this is [WezTerm](https://wezfurlong.org/wezterm/index.html), but I have used others in the past. I could just use separate windows, but built in panes are more convenient.
 2. The left pane holds a terminal-based text editor. This was previously [Neovim](https://neovim.io/), but now I use [Helix](https://helix-editor.com/).
