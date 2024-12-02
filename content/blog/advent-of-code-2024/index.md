@@ -2,7 +2,7 @@
 title = "Advent of Code 2024 / December Adventure"
 date = 2024-12-02T08:00:00+11:00
 summary = "What I'm doing this December."
-card_image = "TODO: crimbas time!"
+card_image = "/images/cards/advent-of-code-2024.png"
 +++
 
 It's December, and that means it's time for another [Advent of Code](adventofcode.com)! This will be my fifth year participating in the event, though so far the only year I finished all tasks in was 2023.
