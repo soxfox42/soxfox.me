@@ -1,6 +1,14 @@
 {{ define "main" }}
 {{ .Content }}
 
+<h1>Recent Posts (<a href="{{ (.GetPage "/blog").Permalink }}">See All</a>)</h1>
+
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ range first 3 $posts }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary }}</p>
+{{ end }}
+
 <h1>Links</h1>
 
 <ul>

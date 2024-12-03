@@ -59,7 +59,7 @@ header > div, h1 {
     color: white;
 }
 
-h1 {
+h1, h1 a {
     color: rgb(183, 26, 85);
 }
 
@@ -201,7 +201,7 @@ th, td {
         border-color: rgb(121, 121, 121);
     }
 
-    h1 {
+    h1, h1 a {
         color: rgb(230, 80, 136);
     }
 

@@ -1,8 +1,7 @@
 {{ define "main" }}
 {{ .Content }}
 {{ range .Pages.ByDate.Reverse }}
-<h1>{{ .Title }}</h1>
+<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
 <p>{{ .Summary }}</p>
-<a href="{{ .RelPermalink }}">Read More</a>
 {{ end }}
 {{ end }}
