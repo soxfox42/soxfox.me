@@ -16,6 +16,8 @@ Here's a few of the options:
 {{< figure src="d_m.png" caption="d_m, who created Nanochat [wrote one in Uxntal](https://git.phial.org/d6/nanochat/src/branch/main/client.tal)." >}}
 {{< figure src="moonchat.png" caption="[Moonchat](https://git.sr.ht/~olive/moonchat), by olive, is written in Lua using Love2D." >}}
 
+There are [several others](https://git.phial.org/d6/nanochat#clients), written in various languages and using various toolkits.
+
 # The Protocol
 
 I said you can use Nanochat without a real client, and it's a great way to understand the protocol, so let's do it!
