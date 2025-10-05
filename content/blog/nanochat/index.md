@@ -303,7 +303,7 @@ Nanochat doesn't stop here though, the community has come up with various conven
 - Messages that start `MOTD` are messages of the day, and many clients have a special area to display them.
 - Clients can send messages that don't follow the `username: message` format, which is commonly used to implement a `/me` command.
 - This is a fun one! Some clients interpret sequences like `\(...)` as containing [Sixel](https://en.wikipedia.org/wiki/Sixel) data, allowing inline images.
-- Replies to users often start with `username, ` to get their attention, and clients can choose to highlight these.
+- Replies to users often start with `username,` to get their attention, and clients can choose to highlight these.
 
 You could also go make up your own extensions to Nanochat and get your own little communities onto it.
 But most of all, have fun with it!
