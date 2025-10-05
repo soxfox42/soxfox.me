@@ -13,7 +13,7 @@ The protocol in question is [Nanochat](https://git.phial.org/d6/nanochat), and i
 Clients for Nanochat are easy to write, so it should be no surprise that there are already several to pick from.
 Here's a few of the options:
 {{< figure src="nanocat.png" caption="There's my own [Nanocat](https://codeberg.org/soxfox42/nanocat)." >}}
-{{< figure src="d_m.png" caption="d_m, who created Nanochat [wrote one in Uxntal](https://git.phial.org/d6/nanochat/src/branch/main/client.tal)." >}}
+{{< figure src="d_m.png" caption="d_m, who created Nanochat, wrote [Electrum](https://git.phial.org/d6/electrum) in Uxntal." >}}
 {{< figure src="moonchat.png" caption="[Moonchat](https://git.sr.ht/~olive/moonchat), by olive, is written in Lua using Love2D." >}}
 
 There are [several others](https://git.phial.org/d6/nanochat#clients), written in various languages and using various toolkits.
