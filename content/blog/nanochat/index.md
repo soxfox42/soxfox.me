@@ -306,4 +306,4 @@ Nanochat doesn't stop here though, the community has come up with various conven
 - Replies to users often start with `username,` to get their attention, and clients can choose to highlight these.
 
 You could also go make up your own extensions to Nanochat and get your own little communities onto it.
-But most of all, have fun with it!
+But most of all, have fun with it! Feel free to come chat with us at `vein.plastic-idolatry.com` with whatever client you like :)
