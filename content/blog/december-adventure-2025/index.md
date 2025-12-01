@@ -39,3 +39,5 @@ Hey, it's me again! I finished implementing the outline feature. It came down to
 3. Render some outlines! For this, I used the prerendered outlines I mentioned above with a bitmap in `1BitPalette` mode. That way I can switch the colour of the outlines really easily. There were some tricky details around layout and enabling transparency, but everything came together nicely.
 
 {{< figure src="shine-through-outline.png" alt="Outlines enabled in the QEMU-based Pebble emulator" caption="I didn't get the colours quite right for this screenshot." >}}
+
+The code changes are [on GitHub](https://github.com/soxfox42/shine-through/commit/6ca8ebd6a7a1195ffc51bb11f43e7410e0226b13).
