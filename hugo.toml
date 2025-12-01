@@ -5,3 +5,7 @@ timeZone = "Australia/Melbourne"
 
 [markup.highlight]
 style = "github-dark"
+
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 1

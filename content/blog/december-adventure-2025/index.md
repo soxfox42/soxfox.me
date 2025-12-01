@@ -11,6 +11,8 @@ tags = ["Projects", "December Adventure"]
 
 Welcome to my December Adventure log! I'll try to update it with a little bit of progress every day this month. I don't have a specific project in mind to focus on, but I have a few ongoing ones that I can share some updates for.
 
+{{< toc >}}
+
 # Day 1: Shine Through Outlines
 
 [Shine Through](https://github.com/soxfox42/shine-through) is a Pebble watchface I recently released. I was actually going to write a separate post about it, but here's the summary:
