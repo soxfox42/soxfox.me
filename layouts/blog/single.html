@@ -10,3 +10,10 @@
 {{ end }}
 <p><a href="{{ relref . "/blog" }}">← Back to Posts</a></p>
 {{ end }}
+
+{{ define "comments" }}
+<h1>Comments</h1>
+<p>Please note: this comment system is experimental and may be removed.</p>
+<p>Rules: Be excellent to each other!</p>
+<iframe id="comments" src="http://competent.soxfox.me/comments/{{ (path.Split .Path).File }}" onload="this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px'">
+{{ end }}

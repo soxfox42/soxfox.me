@@ -65,6 +65,9 @@
         {{ block "main" . }}
         {{ .Content }}
         {{ end }}
+
+        {{ block "comments" . }}
+        {{ end }}
     </main>
 </body>
 
