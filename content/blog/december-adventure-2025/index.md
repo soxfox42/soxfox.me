@@ -29,3 +29,13 @@ So that's one goal during DecAdv. Today's project is *not* that, but it is an im
 {{< figure src="shine-through-outline-mockup.png" caption="A mock-up of the outline feature" width="144" >}}
 
 I'll update this page later once I work on the implementation :)
+
+---
+
+Hey, it's me again! I finished implementing the outline feature. It came down to a handful of steps:
+
+1. Create some prerendered outlines. I did this very quickly in [Aseprite](https://www.aseprite.org/) the same way I did it for the mockup above - select the digits, expand the selection by 1px, then border it by 2px.
+2. Boring settings updates. I'm using the Pebble Clay configuration framework, so I can expose these new settings to the mobile app by adding a couple of items to a JSON list. This step also involved creating new message keys, expanding the persistent settings structure, and adding all the plumbing that lets me get settings from phone to watch.
+3. Render some outlines! For this, I used the prerendered outlines I mentioned above with a bitmap in `1BitPalette` mode. That way I can switch the colour of the outlines really easily. There were some tricky details around layout and enabling transparency, but everything came together nicely.
+
+{{< figure src="shine-through-outline.png" alt="Outlines enabled in the QEMU-based Pebble emulator" caption="I didn't get the colours quite right for this screenshot." >}}
