@@ -57,3 +57,19 @@ I could leave it at that, and support Pebble 2 without supporting the classic wa
 {{< figure src="aplite-2.png" alt="Watchface in black and white, time is unreadable as it's entirely white" caption="Sort of recognisable?" >}}
 
 Tomorrow I'll need to start actually putting this stuff behind conditional compilation so that I can support both colour and black/white screens.
+
+# Day 3: Dithering
+
+Alright, slapped some `ifdef`s around things and got the same app building for both Aplite/Basalt. I also wrote a very simple ordered dither for black/white mode. At this stage I didn't have a way to customise the dithering result, but that should pretty much be an additional lookup table on top of what I already wrote.
+
+{{< figure src="shine-through-both.png" caption="Shine Through running on both platforms" >}}
+
+The bigger issue with customising the colours on Aplite is that Clay, the Pebble config framework, doesn't have a built in way to select dithering patterns. For colour screens, I could just add a `type: "color"` option and have the entire palette available, but the closest built in feature for black/white is the `allowGray` flag which enables a single additional gray shade.
+
+I ended up using a custom `layout` option for the colour selector, because that way I can keep the nice visual element of a colour picker while supporting my own colours. On the watch, when I receive the config, I convert from the full colour value to a single byte from 0 to 4. Thankfully the Clay config comes from a JavaScript file, so I can add some logic to automatically update the options for black/white platforms, which wouldn't be possible with plain JSON.
+
+Some final fixes for the top/bottom text, and I have a working Pebble Classic watchface (which should also run on Pebble 2). Hopefully I'll get that out onto the Pebble appstore tomorrow :)
+
+{{< figure src="aplite-done.png" caption="Shine Through on Aplite, for real!" >}}
+
+By the way, tomorrow's entry might be short, I've got a work Christmas event :P
