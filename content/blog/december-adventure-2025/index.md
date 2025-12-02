@@ -43,3 +43,17 @@ Hey, it's me again! I finished implementing the outline feature. It came down to
 {{< figure src="shine-through-outline.png" alt="Outlines enabled in the QEMU-based Pebble emulator" caption="I didn't get the colours quite right for this screenshot." >}}
 
 The code changes are [on GitHub](https://github.com/soxfox42/shine-through/commit/6ca8ebd6a7a1195ffc51bb11f43e7410e0226b13).
+
+# Day 2: Black and White
+
+I've got a bit less time today, but I want to get started on supporting black and white Pebbles. I'll get started by just... enabling the `aplite` (Pebble Classic) platform in package.json:
+
+{{< figure src="aplite-1.png" alt="Emulated watch, with top and bottom text visible but no numbers." caption="Something's missing..." width="200" >}}
+
+Honestly I half-expected a completely blank screen, so I'm already exceeding expectations. A bit of debugging later, and I found that I don't have enough memory to allocate the `GBitmap` that I render the time into. I also tried enabling the `diorite` platform (Pebble 2), which should have much more heap space available, and it worked.
+
+I could leave it at that, and support Pebble 2 without supporting the classic watches, but that feels a bit lazy. Instead, switching the bitmap to `GBitmap1Bit` format allows it to allocate successfully on the classic watch. Of course, my rendering code directly manipulates the bitmap data to draw the time, and the 2bpp code won't work on a 1bpp image. Quickly switching out `set_2bpp_pixel` for a new 1bpp version got me this:
+
+{{< figure src="aplite-2.png" alt="Watchface in black and white, time is unreadable as it's entirely white" caption="Sort of recognisable?" >}}
+
+Tomorrow I'll need to start actually putting this stuff behind conditional compilation so that I can support both colour and black/white screens.
