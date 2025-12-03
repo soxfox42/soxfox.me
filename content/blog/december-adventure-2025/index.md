@@ -68,7 +68,7 @@ The bigger issue with customising the colours on Aplite is that Clay, the Pebble
 
 I ended up using a custom `layout` option for the colour selector, because that way I can keep the nice visual element of a colour picker while supporting my own colours. On the watch, when I receive the config, I convert from the full colour value to a single byte from 0 to 4. Thankfully the Clay config comes from a JavaScript file, so I can add some logic to automatically update the options for black/white platforms, which wouldn't be possible with plain JSON.
 
-Some final fixes for the top/bottom text, and I have a working Pebble Classic watchface (which should also run on Pebble 2). Hopefully I'll get that out onto the Pebble appstore tomorrow :)
+Some final fixes for the top/bottom text, and I have a working Pebble Classic watchface (which should also run on Pebble 2). Hopefully I'll get that out onto the Pebble appstore tomorrow :) The code is on [the aplite branch](https://github.com/soxfox42/shine-through/tree/aplite).
 
 {{< figure src="aplite-done.png" caption="Shine Through on Aplite, for real!" >}}
 
