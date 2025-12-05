@@ -81,3 +81,21 @@ By the way, tomorrow's entry might be short, I've got a work Christmas event :P
 For release 1.2 of Shine Through, I actually want to support all Pebble platforms, including Chalk (Pebble Time Round) and Emery (Pebble Time 2 🤩). I spent the evening finishing up those platforms. Chalk was surprisingly easy, I just disabled the top and bottom text layers and it worked. I wish I could say I planned for the digits to fit perfectly within the bounds of the PTR's 180px diameter screen, but it was really a happy accident. Pebble Time 2 is basically like Pebble Time, but with a bigger (and higher DPI) screen. To support it well, I redrew the digits at a higher resolution for nice curves, and adjusted the positioning of the text layers (using the same font for now).
 
 Everything is *almost* ready for release, but I need to do some final testing and clean-up. If you want to test it early, you can [download the PBW](https://files.soxfox.me/shine-through-1.2-beta1.pbw) and sideload it.
+
+# Day 5: Release Day + New Project
+
+I fixed a few final bugs in my watchface today, and released 1.2 to the [Rebble app store](https://apps.rebble.io/en_US/application/692ad49949be450009b545c7).
+
+{{< figure src="all-watches.png" caption="Family Photo (using default settings)" alt="All versions of the Shine Through watchface" >}}
+
+Shine Through 1.2 checks off the remaining items from my to-do list for the watchface, so it's time to move on to a different project. This is one that I've been exploring on and off for a while now, and there's still a bit to do on it. For background, [My4TH](http://mynor.org/my4th) is a very simple single board computer built entirely from discrete 7400-series logic chips. It also features an optional expansion board called the Forth Deck with an LCD and keyboard. Sadly, the Forth Deck kit seems to have been sold out for a while, but I believe all the design files are freely available.
+
+For a while now I've been developing an emulator for My4TH and the Forth Deck called "Your4TH", at least until I think of a good name. The My4TH software kit already includes a simulator, but this has a couple of issues. First, it's a low-level simulator, which is great when you want to generate precise captures of every signal on the board, and less great when you want to run the emulator without maxing out a CPU core (or when you want to port it to a microcontroller 🤔). Second, as far as I can tell, it doesn't emulate the Forth Deck's LCD and keyboard, only the basic serial output from the My4TH board.
+
+Here's where this project was up to before December:
+
+{{< figure src="your4th-1.png" >}}
+
+Behind the scenes, I have full CPU microcode emulation working, as well as UART via stdin/stdout, and a virtual I²C bus with EEPROM chips for persistence. When the Forth Deck UI is up though, I can't see any of that. In theory it's still running the My4TH ROM, but since I haven't yet touched emulation of the display controller or the keyboard matrix, there's no visible output.
+
+This evening, I started by just trying to emulate some of the glue logic on the Forth Deck board, and calling out to functions that will eventually emulate the LCD and keyboard state. It seems to be working well, and I should be able to move on to building up the state machine for the LCD controller (which is not-so-secretly two identical controllers) tomorrow.
