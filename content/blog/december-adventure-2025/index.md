@@ -119,3 +119,17 @@ Here are a few highlights from developing the LCD emulator:
 {{< figure src="lcd-good.png" caption="Got everything working!" >}}
 
 I think this supports basically all functionality of the real LCD apart from scrolling. My4TH doesn't seem to use the scroll feature, but I will probably add it at some point anyway. The next things I want to do are link up the key states to an emulated key matrix, and then clean up the code. For now though, a break from this sounds good -- plus I'll do today's Advent of Code :)
+
+# Day 8: My4TH Keyboard
+
+I got the keyboard working in Your4TH today, which I think makes the Forth Deck emulation complete? The keyboard uses a matrix arrangement, where each of the 56* buttons is attached to a row output pin and a column input pin. The My4TH board then turns off (all outputs are kept high by default) each row pin in sequence, and checks the input value to see which keys are pressed. So what about that * after 56? That's where I lied to you, since the matrix layout used by the Forth Deck is 9 × 6, which only accounts for 54 keys. The other two keys are a little different.
+
+{{< figure src="shift-reset.png" caption="Forth Deck Shift/Reset schematic. Copyright Dennis Kuschel, used under [Creative Commons Attribution-ShareAlike 4.0 International License](http://mynor.org/downloads/LICENSE-CC-BY-SA-4.0.txt)." class="invertible" >}}
+
+The board detection logic was the first part of Forth Deck I implemented in Your4TH, because it determines whether the computer will output to UART or the LCD. It turns out that the same input pin is used for the shift key, as shown in the schematic above. Whenever M6 (one bit of the internal shift register) is set low, pressing shift will pull IN7 low. M6 is needed to control it because otherwise the shift key would interfere with both board detection and, more importantly, with the nine keys that use IN7 in the keyboard matrix.
+
+It took me a little bit to figure all this out, so I was stuck without a shift key for a while. Once I did though, it was simple to implement, and the keyboard seems to work in its entirety. I didn't implement Reset yet because it's not critical to the operation of the deck, plus the current code is a bit of a mess with random globals everywhere, so resetting the system is not as easy as it should be.
+
+My next goals for this are:
+1. Just play around with My4TH for a bit, maybe try writing a simple game?
+2. Clean up the pile of random global variables that make up the current version of Your4TH.
