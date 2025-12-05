@@ -70,6 +70,8 @@ I ended up using a custom `layout` option for the colour selector, because that 
 
 Some final fixes for the top/bottom text, and I have a working Pebble Classic watchface (which should also run on Pebble 2). Hopefully I'll get that out onto the Pebble appstore tomorrow :) The code is on [the aplite branch](https://github.com/soxfox42/shine-through/tree/aplite).
 
+Update Dec 5: That branch is gone, and black/white mode is merged into the main branch now.
+
 {{< figure src="aplite-done.png" caption="Shine Through on Aplite, for real!" >}}
 
 By the way, tomorrow's entry might be short, I've got a work Christmas event :P
