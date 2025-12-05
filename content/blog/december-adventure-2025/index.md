@@ -133,3 +133,7 @@ It took me a little bit to figure all this out, so I was stuck without a shift k
 My next goals for this are:
 1. Just play around with My4TH for a bit, maybe try writing a simple game?
 2. Clean up the pile of random global variables that make up the current version of Your4TH.
+
+# Day 9: Nothing
+
+Today, I rest.
