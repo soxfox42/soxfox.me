@@ -99,3 +99,23 @@ Here's where this project was up to before December:
 Behind the scenes, I have full CPU microcode emulation working, as well as UART via stdin/stdout, and a virtual I²C bus with EEPROM chips for persistence. When the Forth Deck UI is up though, I can't see any of that. In theory it's still running the My4TH ROM, but since I haven't yet touched emulation of the display controller or the keyboard matrix, there's no visible output.
 
 This evening, I started by just trying to emulate some of the glue logic on the Forth Deck board, and calling out to functions that will eventually emulate the LCD and keyboard state. It seems to be working well, and I should be able to move on to building up the state machine for the LCD controller (which is not-so-secretly two identical controllers) tomorrow.
+
+# Day 6 & 7: LCD Emulator
+
+I've been busy with some other things, so this is a combined update for the last two days of work on Your4TH. The Forth Deck uses a 4x40 character LCD. There are many available models of this type of display, but they all work the same way -- they include two HD44780 (or compatible) display controllers, one for the upper 2x40 characters and the other for the lower characters.
+
+I've spent some time going over documentation for this controller, and implementing an emulated version in C. It outputs directly to a 1-bit bitmap in memory which makes it simpler to switch from my current Raylib UI to another front-end later. Also, I made it load the controller's CGROM (character generator ROM, basically the font used on the display) from a file. The current font is the standard A00 CGROM.
+
+{{< aside "Converting Fonts" >}}
+I created the font in Aseprite as a 80x128px image (16x16 characters, 5x8px each), but the emulator needs the fonts as raw binary data. To convert the fonts I wrote a separate tool, but instead of a sensible choice like Python + Pillow, I chose to do the conversion in [Uiua](https://www.uiua.org/).
+
+I'm a little surprised that this is the first time I've mentioned Uiua on here, but it's a fun array-based concatenative programming language. Both array languages and concatenative languages are pretty concise, so here's the entire core of the transformation from image data to flat bytes: `°⋯⍜⍉(/≡⊂↯16_5_128)`.
+{{< /aside >}}
+
+Here are a few highlights from developing the LCD emulator:
+
+{{< figure src="first-bytes.png" caption="First time capturing bytes written to the LCD" class="invertible" >}}
+{{< figure src="lcd-garbled.png" caption="I forgot how I laid out the LCD bitmap" >}}
+{{< figure src="lcd-good.png" caption="Got everything working!" >}}
+
+I think this supports basically all functionality of the real LCD apart from scrolling. My4TH doesn't seem to use the scroll feature, but I will probably add it at some point anyway. The next things I want to do are link up the key states to an emulated key matrix, and then clean up the code. For now though, a break from this sounds good -- plus I'll do today's Advent of Code :)
