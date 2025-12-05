@@ -137,3 +137,25 @@ My next goals for this are:
 # Day 9: Nothing
 
 Today, I rest.
+
+# Day 10: Writing Forth
+
+I've picked a simple game to write in Forth for the Forth Deck (although I'm not limiting myself to the Deck's editor): Wordle! I've made a [Wordle clone](https://typit.soxfox.me/) before, but this one presents a few interesting limitations. Due to the limited memory and very limited speed of My4TH, I'm simplifying things a bit by not requiring that guesses be real words.
+
+I started by putting together some display routines that can show basic Wordle results on the simple LCD screen. Surrounding each letter with brackets instead of using green/yellow seems to work ok.
+
+```forth
+: MK DROP + C@ EMIT ;
+: MK< S"  <[" MK ;
+: MK> S"  >]" MK ;
+: SHOW-LETTER OVER MK< EMIT MK> ;
+: SHOW-WORD 5 0 DO OVER I + C@ OVER I + C@ SHOW-LETTER LOOP 2DROP ;
+```
+
+Here's how it looks:
+
+{{< figure src="wordle-1.png" >}}
+
+Also, I contributed a small but useful [change to the Pebble SDK](https://github.com/coredevices/PebbleOS/pull/578) -- in the next update, BDF fonts can be imported directly for custom pixel-perfect text. All the support was already there, I just needed to mark the extension as allowed.
+
+I think in the near future I'll write an Aseprite extension or a tool that uses exported Aseprite slices to generate a BDF, since I don't really like any existing BDF editors.
